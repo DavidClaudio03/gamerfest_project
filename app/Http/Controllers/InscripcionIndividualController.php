@@ -190,7 +190,7 @@ class InscripcionIndividualController extends Controller
                     $query->select('id', 'name', 'phone');
                 }])
                 ->select('id', 'user_id', 'estado_pago', 'id_juego', 'nro_comprobante', 'comprobante_pago', 'valor_comprobante') // incluye nro_comprobante y valor_comprobante
-                ->paginate(10)
+                ->paginate(100)
                 ->map(function ($inscripcion) use ($juego) {
                     $inscripcion->nombre_juego = $juego->nombre; // incluye nombre del juego
                     return $inscripcion;

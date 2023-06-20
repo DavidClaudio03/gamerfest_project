@@ -75,7 +75,7 @@ const updatePaymentStatus = async (participante) => {
 
         <div class="py-12 animate__animated animate__fadeInUp">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="custom-width bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
+                <div class="custom-width bg-white overflow-scroll shadow-sm sm:rounded-lg p-6">
                     <p class="my-2 py-2">Selecciona un juego</p>
                     <select v-model="selectedGame" @change="updateInscriptions"
                         class="mb-4 block w-full px-4 py-2 rounded border border-gray-200">
