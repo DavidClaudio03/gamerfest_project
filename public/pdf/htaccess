@@ -1,0 +1,5 @@
+# Inicio a Redireccion para https no borrar
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Fin a Redireccion para https no borrar

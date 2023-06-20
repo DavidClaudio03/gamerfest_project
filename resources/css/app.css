@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    height: 100%;
+    position: relative;
+    background: linear-gradient(-45deg, #6a057f, #8b008b, #483d8b, #4169e1, #1e90ff);
+    background-color: white;
+    background-size: 500% 500%;
+    animation: all 10s ease infinite;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('/backgrounds/ag-square.png');
+    background-size: 100px 100px; /* Cambiar a un tamaño mayor aquí */
+    background-repeat: repeat;
+    pointer-events: none;
+    transform: translateY(-100px);
+}
+
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 50% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    75% {
+        background-position: 50% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.img-welcome {
+    overflow: hidden;
+}
+
+.img-welcome img{
+    border-radius: 23px;
+    transform: scale(1);
+    transition: transform 200ms ease-in-out;
+}
+
+.img-welcome img:hover{
+    transform: scale(1.05);
+    transition: transform 200ms ease-in;
+}
