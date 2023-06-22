@@ -55,9 +55,9 @@ class AuthenticatedSessionController extends Controller
     {
         $recaptchaIsValid = $this->verifyRecaptcha($request->input('recaptcha'));
 
-        // if (!$recaptchaIsValid) {
-        //     return back()->withErrors(['recaptcha' => 'Invalid reCAPTCHA.']);
-        // }
+        if (!$recaptchaIsValid) {
+            return back()->withErrors(['recaptcha' => 'Invalid reCAPTCHA.']);
+        }
 
         $request->authenticate();
         $request->session()->regenerate();

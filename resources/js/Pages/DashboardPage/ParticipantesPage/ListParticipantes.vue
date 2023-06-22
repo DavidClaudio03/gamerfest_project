@@ -48,6 +48,24 @@ watch(selectedGame, async (newVal) => {
     }
 });
 
+const generateReport = async () => {
+    const response = await axios.post('/report_participantes_by_game', { game: selectedGame.value }, { responseType: 'blob' });
+    const url = window.URL.createObjectURL(new Blob([response.data]));
+    const link = document.createElement('a');
+    link.href = url;
+    const contentDisposition = response.headers['content-disposition'];
+    let fileName = 'report.pdf';
+    if (contentDisposition) {
+        const fileNameMatch = contentDisposition.match(/filename="(.+)"/);
+        if (fileNameMatch.length === 2)
+            fileName = fileNameMatch[1];
+    }
+    link.setAttribute('download', fileName);
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+}
+
 const updateInscriptions = async () => {
     const inscriptionResponse = await axios.post('/get_inscripciones_by_game', { game: selectedGame.value });
     inscripciones.value = [...inscriptionResponse.data.inscripcionesIndividuales, ...inscriptionResponse.data.inscripcionesGrupales];
@@ -76,11 +94,20 @@ const updatePaymentStatus = async (participante) => {
         <div class="py-12 animate__animated animate__fadeInUp">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="custom-width bg-white overflow-scroll shadow-sm sm:rounded-lg p-6">
-                    <p class="my-2 py-2">Selecciona un juego</p>
-                    <select v-model="selectedGame" @change="updateInscriptions"
-                        class="mb-4 block w-full px-4 py-2 rounded border border-gray-200">
-                        <option v-for="game in games" :value="game.id" :key="game.id">{{ game.nombre }}</option>
-                    </select>
+                    <div>
+                        <p class="my-2">Selecciona un juego</p>
+                        <div class="flex items-center space-x-4">
+                            <select v-model="selectedGame" @change="updateInscriptions"
+                                class="px-4 py-2 w-9/12 rounded border border-gray-200">
+                                <option v-for="game in games" :value="game.id" :key="game.id">{{ game.nombre }}</option>
+                            </select>
+                            <button type="button"
+                                class="w-1/4 flex justify-center items-center px-4 py-2 bg-purple-800 hover:bg-purple-700 text-white rounded"
+                                @click="generateReport">
+                                Generar Reporte
+                            </button>
+                        </div>
+                    </div>
 
                     <table v-if="inscripciones.length" class="w-full bg-white rounded shadow overflow-hidden">
                         <thead class="bg-gray-50">

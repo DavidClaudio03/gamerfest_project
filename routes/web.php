@@ -10,6 +10,7 @@ use App\Http\Controllers\CertificadoController;
 use App\Http\Controllers\EquipoController;
 use App\Http\Controllers\InscripcionIndividualController;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\ReportesController;
 use Illuminate\Foundation\Application;
 use Inertia\Inertia;
 
@@ -54,6 +55,7 @@ Route::middleware('auth')->group(function () {
 
     //Inscripciones
     Route::get('/get_mis_inscripciones', [InscripcionIndividualController::class, 'get_mis_inscripciones'])->name('inscripciones');
+    Route::post('/report_participantes_by_game', [ReportesController::class, 'report_participantes_by_game']); 
 });
 
 require __DIR__.'/auth.php';
