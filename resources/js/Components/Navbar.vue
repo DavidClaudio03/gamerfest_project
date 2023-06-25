@@ -1,5 +1,6 @@
 <script setup>
 import { ref, watchEffect } from 'vue';
+import Swal from 'sweetalert2';
 import { Head, Link } from '@inertiajs/vue3';
 
 defineProps({
@@ -33,6 +34,15 @@ defineProps({
 
 const toggleMenu = () => {
     isActive.value = !isActive.value;
+}
+
+const showAlert = () => {
+    Swal.fire({
+        title: 'Inscripciones cerradas',
+        text: 'Por el momento, no se aceptan más inscripciones. Lamentamos los inconvenientes.',
+        icon: 'info',
+        confirmButtonText: 'Entendido'
+    });
 }
 
 const isActive = ref(false);

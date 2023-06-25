@@ -61,7 +61,7 @@ class RegisteredUserController extends Controller
             'email' => 'required|string|email|max:255|unique:'.User::class,
             'phone' => 'required|string|max:10|min:10|unique:'.User::class,
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'recaptcha' => 'required',
+            /*'recaptcha' => 'required',*/
         ]);
 
         $recaptchaIsValid = $this->verifyRecaptcha($request->input('recaptcha'));

@@ -56,6 +56,7 @@ Route::middleware('auth')->group(function () {
     //Inscripciones
     Route::get('/get_mis_inscripciones', [InscripcionIndividualController::class, 'get_mis_inscripciones'])->name('inscripciones');
     Route::post('/report_participantes_by_game', [ReportesController::class, 'report_participantes_by_game']); 
+    Route::post('/generar_certificado', [ReportesController::class, 'generar_certificado']);
 });
 
 require __DIR__.'/auth.php';

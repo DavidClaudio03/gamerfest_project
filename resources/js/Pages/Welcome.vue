@@ -206,8 +206,7 @@ const options = {
                 </div>
                 <div class="card_container">
                     <div v-for="juego in juegosIndividual" :key="juego.id">
-
-                        <div class="flex flex-col items-center mb-4">
+                        <div v-if="juego.id==14" class="flex flex-col items-center mb-4">
                             <CardCheckbox :gameId="juego.id" :gameName="juego.nombre" :gamePrice="juego.costo_inscripcion"
                                 :imageUrl="`/img/${juego.img_id}.jpg`" :imageId="`${juego.img_id}`"
                                 :estaInscrito="juego.estaInscrito" @selectionChange="handleSelectionChange"
@@ -216,13 +215,12 @@ const options = {
                                 :href="`/pdf/${juego.img_id}.pdf`" target="_blank">
                                 <i class="fa-solid fa-book mr-2"></i>Reglamento
                             </a>
-
                         </div>
                     </div>
                 </div>
 
             </div>
-            <div class="most-popular" style="background-color: rgba(67, 61, 66, 0.86); margin-top: 40px;">
+            <!-- <div class="most-popular" style="background-color: rgba(67, 61, 66, 0.86); margin-top: 40px;">
                 <h2 class="section-title">Listado Juegos Grupales</h2>
                 <div class="help-text">
                     Selecciona algún juego grupal, únicamente es necesario la inscripción del capitan...
@@ -241,7 +239,7 @@ const options = {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
             <div class="most-popular location" style="background-color: rgba(67, 61, 66, 0.86); margin-top: 40px;">
                 <h2 class="section-title">Ubicación del evento</h2>
                 <div class="embed-responsive embed-responsive-1by1">

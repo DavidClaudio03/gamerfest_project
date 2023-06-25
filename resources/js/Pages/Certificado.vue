@@ -1,6 +1,7 @@
 <script setup>
 import { Head, Link, useForm, usePage } from '@inertiajs/vue3';
 import { reactive, onMounted, ref, watchEffect} from 'vue';
+import Swal from 'sweetalert2';
 import Navbar from '@/Components/Navbar.vue'
 
 defineProps({
@@ -24,6 +25,10 @@ const juegosInscritos = ref(
     JSON.parse(localStorage.getItem('juegosInscritos')) || []
 );
 
+const form = useForm({
+    tipo_certificado: "ninguno",
+})
+
 const numJuegosSeleccionados = ref(juegosInscritos.value.length);
 
 watchEffect(() => {
@@ -33,6 +38,44 @@ watchEffect(() => {
 });
 
 const state = reactive({ juegos: [], total: 0 });
+
+const generateCertificado = async () => {
+    if (form.tipo_certificado !== 'ninguno') {
+        try {
+            const response = await axios.post('/generar_certificado', { tipo_certificado: form.tipo_certificado }, { responseType: 'blob' });
+            const url = window.URL.createObjectURL(new Blob([response.data]));
+            const link = document.createElement('a');
+            link.href = url;
+            const contentDisposition = response.headers['content-disposition'];
+            let fileName = 'report.pdf';
+            if (contentDisposition) {
+                const fileNameMatch = contentDisposition.match(/filename="(.+)"/);
+                if (fileNameMatch.length === 2)
+                    fileName = fileNameMatch[1];
+            }
+            link.setAttribute('download', fileName);
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+        } catch (error) {
+            if (error.response) {
+                Swal.fire({
+                    title: 'Fallo al generar',
+                    text: "Parece que no te has inscrito en ningun juego :( ",
+                    icon: 'error',
+                    confirmButtonText: 'Ok'
+                });
+            } else {
+                Swal.fire({
+                    title: 'Error!',
+                    text: "Ha ocurrido un error inesperado",
+                    icon: 'error',
+                    confirmButtonText: 'Ok'
+                });
+            }
+        }
+    }
+}
 
 
 </script>
@@ -48,17 +91,104 @@ const state = reactive({ juegos: [], total: 0 });
     </div>
 
     <div class="mt-20">
-        <div class="max-w-7xl mx-auto">
-            <div class="most-popular" style="background-color: rgba(67, 61, 66, 0.86); margin-top: 160px;">
-                <div class="text-white w-50 my-5" style="font-size: 16px; font-weight: bold; text-align: center; margin: 0 auto;">
-                    <img src="/img/flash.png" alt="flash" style="display: block; margin: 30px auto;">
-                    <p class="text-lg">
-                        Tranquilo...  no vayas tan rápido, los certificados se podrán generar a partir del 22 de Junio (El día Inauguración del evento)
-                    </p>
+    <div class="max-w-7xl mx-auto">
+        <div class="most-popular" style="background-color: rgba(67, 61, 66, 0.86); margin-top: 160px;">
+
+            <!-- Información del Evento -->
+            <div class="event-info text-white w-75 my-5 mx-auto text-center">
+                <h1 style="font-size: 28px; font-weight: bold;">Gamerfest 2023</h1>
+                <p style="font-size: 16px; margin-top: 20px;">Descubre más sobre el evento, los participantes y los juegos que hicieron historia este año.</p>
+            </div>
+
+            <!-- Galería -->
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide">
+                        <img src="img/clash_royale.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="slide">
+                        <img src="img/fifa.jpg" alt="Imagen 2">
+                    </div>
+                    <div class="slide">
+                        <img src="img/mario_kart.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="slide">
+                        <img src="img/just_dance.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="slide">
+                        <img src="img/free_fire.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="slide">
+                        <img src="img/mortal_kombat.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="slide">
+                        <img src="img/valorant.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="slide">
+                        <img src="img/lol.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="slide">
+                        <img src="img/dragon_ball.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="slide">
+                        <img src="img/dota2.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clash_royale.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="slide">
+                        <img src="img/fifa.jpg" alt="Imagen 2">
+                    </div>
+                    <div class="slide">
+                        <img src="img/mario_kart.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="slide">
+                        <img src="img/just_dance.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="slide">
+                        <img src="img/free_fire.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="slide">
+                        <img src="img/mortal_kombat.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="slide">
+                        <img src="img/valorant.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="slide">
+                        <img src="img/lol.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="slide">
+                        <img src="img/dragon_ball.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="slide">
+                        <img src="img/dota2.jpg" alt="Imagen 3">
+                    </div>
                 </div>
             </div>
+
+
+            <!-- Botón de Certificado -->
+            <div class="text-white w-100 my-5 flex flex-col items-center" style="font-size: 16px; font-weight: bold;">                    
+                <select name="tipo_certificado" id="tipo_certificado" class="text-black font-thin rounded" v-model="form.tipo_certificado">
+                    <option value="ninguno">-- Selecciona un tipo de Certificado -- </option>
+                    <option value="diploma" class="Asistencia">Diploma</option>
+                    <option value="formal" class="Formal">Formal</option>
+                </select>
+
+                <button 
+                    class="mt-4 flex justify-center items-center px-4 py-2 bg-purple-800 hover:bg-purple-700 text-white rounded"
+                    @click.prevent="generateCertificado">
+                    Obtener mi Certificado
+                </button>
+            </div>
+
+
+
+
         </div>
     </div>
+</div>
+
     <footer class="text-white text-center mt-5" style="background-color: rgba(67, 61, 66, 0.86);">
         <div class="container p-4">
             <div class="row justify-content-center">
@@ -95,5 +225,55 @@ const state = reactive({ juegos: [], total: 0 });
 
 <style>
 
-</style>
+.slider {
+    overflow: hidden;
+    height: 250px; /* Asegúrate de que esta sea la altura correcta para tu slider */
+    position: relative;
+}
+.slider::before, .slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0; /* Agrega esta propiedad para asegurar que el pseudo-elemento tenga la altura completa */
+    width: 50px;
+    z-index: 2; /* Asegura que los pseudo-elementos queden por encima de las imágenes */
+    background: linear-gradient(to right, rgba(46, 40, 40,0.50) 0%, transparent 100%);
+}
+.slider::after {
+    right: 0;
+    transform: rotate(180deg);
+}
 
+.slide-track {
+    display: flex;
+    width: calc(250px * 20); /* Ajuste de acuerdo con el número total de imágenes y su ancho */
+    animation: scroll 30s linear infinite; /* Ajuste la duración para que la velocidad de desplazamiento sea la misma */
+}
+
+.slide {
+    width: 250px; /* Este debería ser el ancho de tu imagen */
+    height: 250px; /* Ajusta esto al tamaño que quieras */
+    overflow: hidden; /* Esconde cualquier parte de la imagen que sobrepase los límites */
+    display: flex; /* Centra la imagen en el contenedor */
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    scroll-padding: 0 10px;
+    scroll-margin: 0 10px;
+}
+
+.slide img {
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 1;
+}
+
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 10)); } /* Aquí se mueve la totalidad de las imágenes antes de reiniciar */
+}
+
+</style>
