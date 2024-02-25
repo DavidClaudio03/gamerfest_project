@@ -39,7 +39,7 @@ const submit = () => {
             phone: form.phone,
             password: form.password,
             password_confirmation: form.password_confirmation,
-            recaptcha: recaptchaToken.value,
+         //   recaptcha: recaptchaToken.value,
             onFinish: () => form.reset('password', 'password_confirmation'),
         });
     });
