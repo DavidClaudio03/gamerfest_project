@@ -119,7 +119,7 @@ Para evitar ataques de tipo DDOS, se ha implementado reCAPTCHA, el cual se encue
 
 ## Esquema Base de Datos
 
-![Esquema Base de Datos](public\assets\bd.png)
+![Esquema Base de Datos](https://github.com/tellxmaster/gamerfest_project/blob/main/public/assets/bd.png)
 
 ## Estructura de Directorios
 
