@@ -53,11 +53,11 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-        $recaptchaIsValid = $this->verifyRecaptcha($request->input('recaptcha'));
+        // $recaptchaIsValid = $this->verifyRecaptcha($request->input('recaptcha'));
 
-        if (!$recaptchaIsValid) {
-            return back()->withErrors(['recaptcha' => 'Invalid reCAPTCHA.']);
-        }
+        // if (!$recaptchaIsValid) {
+        //     return back()->withErrors(['recaptcha' => 'Invalid reCAPTCHA.']);
+        // }
 
         $request->authenticate();
         $request->session()->regenerate();

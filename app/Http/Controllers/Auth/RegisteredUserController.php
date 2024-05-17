@@ -64,11 +64,11 @@ class RegisteredUserController extends Controller
             /*'recaptcha' => 'required',*/
         ]);
 
-        $recaptchaIsValid = $this->verifyRecaptcha($request->input('recaptcha'));
+        // $recaptchaIsValid = $this->verifyRecaptcha($request->input('recaptcha'));
 
-        if (!$recaptchaIsValid) {
-             return back()->withErrors(['recaptcha' => 'Invalid reCAPTCHA.']);
-        }
+        // if (!$recaptchaIsValid) {
+        //      return back()->withErrors(['recaptcha' => 'Invalid reCAPTCHA.']);
+        // }
 
         $user = User::create([
             'name' => $request->name,
