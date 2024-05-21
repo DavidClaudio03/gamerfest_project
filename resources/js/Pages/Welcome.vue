@@ -157,16 +157,14 @@ const options = {
     </div>
 
     <div class="mt-20">
-        <div class="max-w-7xl mx-auto">
+        <div class="">
             <div
                 class="most-popular animate__animated animate__fadeIn"
                 style="
-                    background-color: rgba(67, 61, 66, 0.86);
                     margin-top: 140px;
-                "
-            >
+                    background-image: url('/img/fondoGTA.JPG');">
                 <div id="slide" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner" style="border-radius: 25px">
+                    <div class="carousel-inner" style="border-radius: 25px;">
                         <div class="carousel-item active" data-interval="1800">
                             <img
                                 src="/img/slide-1.webp"
@@ -274,7 +272,6 @@ const options = {
                     </a>
                 </div>
             </div>
-
             <div
                 class="most-popular"
                 style="

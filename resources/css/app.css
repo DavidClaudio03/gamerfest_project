@@ -6,8 +6,7 @@
 body {
     height: 100%;
     position: relative;
-    background: linear-gradient(-45deg, #6a057f, #8b008b, #483d8b, #4169e1, #1e90ff);
-    background-color: white;
+    background-image: linear-gradient(to bottom, #932982, #F2468F, #E238BD);
     background-size: 500% 500%;
     animation: all 10s ease infinite;
 }

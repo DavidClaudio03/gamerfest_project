@@ -51,10 +51,10 @@ const isActive = ref(false);
 </script>
 
 <template>
-    <nav class="flex items-center justify-between p-4">
-        <div class="flex items-center space-x-4">
+    <nav class="flex items-center justify-between bg-black">
+        <div class="flex items-center">
             <Link href="/">
-            <img src="/img/gamerfest.png" alt="Logo" class="h-12">
+            <img src="/img/logoGTA.png" alt="Logo" class="w-54 h-28">
             </Link>
         </div>
         <div class="mobile-menu" :class="{ 'active': isActive }">
