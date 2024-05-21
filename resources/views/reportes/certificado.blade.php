@@ -45,7 +45,7 @@
     </head>
     <body>
         <div class="header">
-            <img class="logo" src="{{ public_path('img/gamerfest.png') }}" alt="Logo">
+            <img class="logo" src="{{ public_path('img/logoGTA.png') }}" alt="Logo">
             <div>
                 <h1 class="title">Certificado Gamerfest</h1>
                 <p>Latacunga, {{ \Carbon\Carbon::now()->locale('es')->isoFormat('LL') }}</p>
