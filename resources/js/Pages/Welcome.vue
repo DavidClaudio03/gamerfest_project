@@ -170,7 +170,7 @@ const options = {
                     <div class="carousel-inner" style="border-radius: 25px;">
                         <div class="carousel-item active" data-interval="1800">
                             <img
-                                src="/img/slide-1.webp"
+                                src="/img/slide-8.webp"
                                 height="450px"
                                 class="d-block w-100 img-fluid"
                                 alt="..."
@@ -194,7 +194,7 @@ const options = {
                         </div>
                         <div class="carousel-item" data-interval="1800">
                             <img
-                                src="/img/slide-4.webp"
+                                src="/img/slide-6.webp"
                                 height="450px"
                                 class="d-block w-100 img-fluid"
                                 alt="..."
