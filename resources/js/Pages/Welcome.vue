@@ -162,12 +162,15 @@ const options = {
                 class="most-popular animate__animated animate__fadeIn"
                 style="
                     margin-top: 140px;
-                    background-image: url('/img/fondoGTA.JPG');">
+                    background-image: url('/img/fondoGTA.JPG');
+                    width: auto;
+                    height: auto;
+                    background-size: cover;">
                 <div id="slide" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" style="border-radius: 25px;">
                         <div class="carousel-item active" data-interval="1800">
                             <img
-                                src="/img/slide-1.webp"
+                                src="/img/slide-8.webp"
                                 height="450px"
                                 class="d-block w-100 img-fluid"
                                 alt="..."
@@ -191,7 +194,7 @@ const options = {
                         </div>
                         <div class="carousel-item" data-interval="1800">
                             <img
-                                src="/img/slide-4.webp"
+                                src="/img/slide-6.webp"
                                 height="450px"
                                 class="d-block w-100 img-fluid"
                                 alt="..."
@@ -208,14 +211,6 @@ const options = {
                         <div class="carousel-item" data-interval="1800">
                             <img
                                 src="/img/slide-6.webp"
-                                height="450px"
-                                class="d-block w-100 img-fluid"
-                                alt="..."
-                            />
-                        </div>
-                        <div class="carousel-item" data-interval="1800">
-                            <img
-                                src="/img/slide-7.webp"
                                 height="450px"
                                 class="d-block w-100 img-fluid"
                                 alt="..."
@@ -275,11 +270,14 @@ const options = {
             <div
                 class="most-popular"
                 style="
-                    background-color: rgba(67, 61, 66, 0.86);
+                    background-image:  url('/img/fondoInd.jpg'); ;
                     margin-top: 40px;
+                    width: auto;
+                    height: auto;
+                    background-size: cover;
                 "
             >
-                <h2 class="section-title">Listado Juegos Individuales</h2>
+                <h2 class="section-title" >Listado Juegos Individuales</h2>
                 <div class="help-text">
                     Selecciona los juegos para añadir a tú carrito...
                 </div>
@@ -310,8 +308,11 @@ const options = {
             <div
                 class="most-popular"
                 style="
-                    background-color: rgba(67, 61, 66, 0.86);
+                    background-image:  url('/img/fondoGru.jpg');
                     margin-top: 40px;
+                    width: auto;
+                    height: auto;
+                    background-size: cover;
                 "
             >
                 <h2 class="section-title">Listado Juegos Grupales</h2>
@@ -347,26 +348,19 @@ const options = {
             <div
                 class="most-popular location"
                 style="
-                    background-color: rgba(67, 61, 66, 0.86);
+                    background-color: rgba(87, 61, 66, 0.26);
                     margin-top: 40px;
                 "
             >
                 <h2 class="section-title">Ubicación del evento</h2>
                 <div class="embed-responsive embed-responsive-1by1">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1350.6032121715434!2d-78.58631550355919!3d-0.9988007781148552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d4639e3fb9755f%3A0x22fe7f63301b5fee!2sESPE%20-%20Campus%20Belisario%20Quevedo!5e0!3m2!1ses!2sec!4v1671309884965!5m2!1ses!2sec"
-                        class="embed-responsive-item"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                    >
-                    </iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.2120238453513!2d-78.5886726250348!3d-0.998870298991496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d4639e7c398d3f%3A0xc4999bdc40abfc48!2sUniversidad%20De%20Las%20Fuerzas%20Armadas%20ESPE%20Extensi%C3%B3n%20Belisario%20Quevedo!5e0!3m2!1ses-419!2sec!4v1716325420696!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             <div
                 class="most-popular sponsors"
                 style="
-                    background-color: rgba(67, 61, 66, 0.86);
+                    background-color: rgba(87, 61, 66, 0.26);
                     margin-top: 40px;
                 "
             >
@@ -485,10 +479,10 @@ const options = {
                             |
                             <div>
                                 <a
-                                    href="https://github.com/jordantalahua123"
+                                    href="https://github.com/DavidClaudio03"
                                     target="_blank"
                                     class="text-current no-underline link-hover"
-                                    ><span>jordanth</span>
+                                    ><span>DavidClaudio03</span>
                                     <i class="fab fa-github"></i
                                 ></a>
                             </div>
@@ -498,7 +492,7 @@ const options = {
             </div>
         </div>
         <div class="text-center p-3" style="background-color: black">
-            © 2023 Copyright:
+            © 2024 Copyright:
             <a class="text-white">GamerFest</a>
         </div>
     </footer>
