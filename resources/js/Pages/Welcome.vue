@@ -5,7 +5,52 @@ import CardCheckbox from "@/Components/CardCheckbox.vue";
 import Navbar from "@/Components/Navbar.vue";
 import AlertComponent from "@/Components/AlertComponent.vue";
 import axios from "axios";
+import { onMounted } from 'vue';
+onMounted(() => {
+    const shinesContainer = document.querySelector('.shines');
+    const numShines = 10; // Número de puntos de brillo
+    const maxDistance = 50; // Distancia máxima desde el cursor en píxeles
 
+    // Crear los puntos de brillo
+    for (let i = 0; i < numShines; i++) {
+        const shine = document.createElement('div');
+        shine.classList.add('shine');
+        shinesContainer.appendChild(shine);
+    }
+
+    const shines = document.querySelectorAll('.shine');
+
+    document.addEventListener('mousemove', (e) => {
+        shines.forEach((shine) => {
+            const angle = Math.random() * 2 * Math.PI;
+            const distance = Math.random() * maxDistance;
+            const x = e.clientX + distance * Math.cos(angle) - 5; // Ajustar posición horizontal
+            const y = e.clientY + distance * Math.sin(angle) - 5; // Ajustar posición vertical
+
+            shine.style.transform = `translate(${x}px, ${y}px)`;
+            shine.style.opacity = 1;
+        });
+    });
+
+    document.addEventListener('mouseleave', () => {
+        shines.forEach((shine) => {
+            shine.style.opacity = 0;
+        });
+    });
+
+    document.addEventListener('click', () => {
+        shines.forEach((shine) => {
+            shine.style.transition = 'none';
+            shine.style.opacity = 1;
+        });
+        setTimeout(() => {
+            shines.forEach((shine) => {
+                shine.style.transition = 'opacity 0.3s ease-in-out';
+                shine.style.opacity = 0;
+            });
+        }, 200);
+    });
+});
 defineProps({
     role: {
         type: Boolean,
@@ -141,7 +186,7 @@ const options = {
 
 <template>
     <Head title="Inicio" />
-
+    <div id="main-container">
     <div
         class="fixed top-0 left-0 w-full navbar-container animate__animated animate__fadeInDown"
     >
@@ -166,76 +211,67 @@ const options = {
                     width: auto;
                     height: auto;
                     background-size: cover;">
-                <div id="slide" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner" style="border-radius: 25px;">
+                <div id="slide" class="carousel slide" data-ride="carousel" >
+                    <div class="carousel-inner" style="border-radius: 25px;height: 450px; width: 100%; object-fit: cover;" >
                         <div class="carousel-item active" data-interval="1800">
                             <img
-                                src="/img/slide-8.webp"
-                                height="450px"
+                                src="/img/slide_lol.png"
+                                class="d-block w-100 img-fluid "
+                                alt="..."
+                            />
+                        </div>
+                        <div class="carousel-item" data-interval="1800">
+                            <img
+                                src="/img/slide_fortnite.png"
                                 class="d-block w-100 img-fluid"
                                 alt="..."
                             />
                         </div>
                         <div class="carousel-item" data-interval="1800">
                             <img
-                                src="/img/slide-2.webp"
-                                height="450px"
+                                src="/img/slide_free.jpg"
                                 class="d-block w-100 img-fluid"
                                 alt="..."
                             />
                         </div>
                         <div class="carousel-item" data-interval="1800">
                             <img
-                                src="/img/slide-3.webp"
-                                height="450px"
+                                src="/img/slide_fifa.jpg"
                                 class="d-block w-100 img-fluid"
                                 alt="..."
                             />
                         </div>
                         <div class="carousel-item" data-interval="1800">
                             <img
-                                src="/img/slide-6.webp"
-                                height="450px"
+                                src="/img/slide_mario.png"
                                 class="d-block w-100 img-fluid"
                                 alt="..."
                             />
                         </div>
                         <div class="carousel-item" data-interval="1800">
                             <img
-                                src="/img/slide-5.webp"
-                                height="450px"
+                                src="/img/slide_clash.webp"
                                 class="d-block w-100 img-fluid"
                                 alt="..."
                             />
                         </div>
                         <div class="carousel-item" data-interval="1800">
                             <img
-                                src="/img/slide-6.webp"
-                                height="450px"
+                                src="/img/slide_dragon.webp"
                                 class="d-block w-100 img-fluid"
                                 alt="..."
                             />
                         </div>
                         <div class="carousel-item" data-interval="1800">
                             <img
-                                src="/img/slide-8.webp"
-                                height="450px"
+                                src="/img/slide_valorant.webp"
                                 class="d-block w-100 img-fluid"
                                 alt="..."
                             />
                         </div>
                         <div class="carousel-item" data-interval="1800">
                             <img
-                                src="/img/slide-9.webp"
-                                height="450px"
-                                class="d-block w-100 img-fluid"
-                                alt="..."
-                            />
-                        </div>
-                        <div class="carousel-item" data-interval="1800">
-                            <img
-                                src="/img/slide-10.webp"
-                                height="450px"
+                                src="/img/slide_dota.jpg"
                                 class="d-block w-100 img-fluid"
                                 alt="..."
                             />
@@ -390,7 +426,8 @@ const options = {
             </div>
         </div>
     </div>
-
+    <div class="shines"></div>
+    </div>
     <footer
         class="text-white text-center mt-5"
         style="background-color: rgba(67, 61, 66, 0.86)"
@@ -506,6 +543,29 @@ const options = {
 </template>
 
 <style>
+#main-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.shines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.shine {
+    position: absolute;
+    width: 10px; /* Ancho del punto */
+    height: 10px; /* Alto del punto */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -690,3 +750,4 @@ const options = {
     border: none;
 }
 </style>
+

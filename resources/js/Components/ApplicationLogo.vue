@@ -1,3 +1,3 @@
 <template>
-    <img src="/img/gamerfest.png" alt="Logo">
+    <img src="/img/logoGTA.png" alt="Logo">
 </template>
