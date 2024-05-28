@@ -535,10 +535,10 @@ const options = {
                                 ></a>
                             </div>
                             |
-                  
-                           
 
-                            
+
+
+
                         </div>
                     </div>
 
@@ -599,7 +599,7 @@ const options = {
     .carousel-inner {
         height: 180px !important; /* Ajusta este valor según sea necesario */
     }
-    
+
     .carousel-item img {
         max-height: 250px; /* Ajusta este valor según sea necesario */
         object-fit: cover; /* Asegura que la imagen cubra el área disponible sin deformarse */
@@ -813,4 +813,3 @@ const options = {
     border: none;
 }
 </style>
-
