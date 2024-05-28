@@ -434,6 +434,7 @@ const options = {
     >
         <div class="container p-4">
             <div class="row justify-content-center">
+
                 <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
                     <h5 class="text-uppercase">Justificaciones</h5>
                     <br />
@@ -445,7 +446,7 @@ const options = {
                     </p>
                 </div>
 
-                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                <div class="col-md-12 mb-4 mb-md-0">
                     <h5 class="text-uppercase">Redes sociales</h5>
                     <br />
                     <div class="d-flex justify-content-center">
@@ -475,7 +476,8 @@ const options = {
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
                     <div
                         class="d-flex flex-col justify-content-center align-items-center"
                     >
@@ -516,6 +518,27 @@ const options = {
                             |
                             <div>
                                 <a
+                                    href="https://github.com/jordantalahua123"
+                                    target="_blank"
+                                    class="text-current no-underline link-hover"
+                                    ><span>jordanth</span>
+                                    <i class="fab fa-github"></i
+                                ></a>
+                            </div>
+                            |
+                  
+                           
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <div
+                        class="d-flex flex-col justify-content-center align-items-center"
+                    >
+                            <div>
+                                <a
                                     href="https://github.com/DavidClaudio03"
                                     target="_blank"
                                     class="text-current no-underline link-hover"
@@ -523,8 +546,28 @@ const options = {
                                     <i class="fab fa-github"></i
                                 ></a>
                             </div>
+                            <div>
+                                <a
+                                    href="https://github.com/Sinchiton"
+                                    target="_blank"
+                                    class="text-current no-underline link-hover"
+                                    ><span>Sinchiton</span>
+                                    <i class="fab fa-github"></i
+                                ></a>
+                            </div>
+                            <div>
+                                <a
+                                    href="https://github.com/MrT-coder"
+                                    target="_blank"
+                                    class="text-current no-underline link-hover"
+                                    ><span>MrT-coder</span>
+                                    <i class="fab fa-github"></i
+                                ></a>
+                            </div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
