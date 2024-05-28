@@ -185,7 +185,9 @@ const options = {
 </script>
 
 <template>
-    <Head title="Inicio" />
+    <Head title="Inicio">
+        <link rel="icon" type="image/png" href="/img/logo.png">
+    </Head>
     <div id="main-container">
     <div
         class="fixed top-0 left-0 w-full navbar-container animate__animated animate__fadeInDown"
@@ -223,6 +225,13 @@ const options = {
                         <div class="carousel-item" data-interval="1800">
                             <img
                                 src="/img/slide_fortnite.png"
+                                class="d-block w-100 img-fluid"
+                                alt="..."
+                            />
+                        </div>
+                        <div class="carousel-item" data-interval="1800">
+                            <img
+                                src="/img/slide_rocket.jpg"
                                 class="d-block w-100 img-fluid"
                                 alt="..."
                             />

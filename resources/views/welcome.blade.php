@@ -4,7 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <!-- Título de la página -->
+        <title>Inicio</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="/img/logo.png">
+
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
