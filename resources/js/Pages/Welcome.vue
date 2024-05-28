@@ -586,6 +586,17 @@ const options = {
 </template>
 
 <style>
+@media (max-width: 576px) {
+    .carousel-inner {
+        height: 180px !important; /* Ajusta este valor según sea necesario */
+    }
+    
+    .carousel-item img {
+        max-height: 250px; /* Ajusta este valor según sea necesario */
+        object-fit: cover; /* Asegura que la imagen cubra el área disponible sin deformarse */
+    }
+}
+
 #main-container {
     position: relative;
     overflow: hidden;
