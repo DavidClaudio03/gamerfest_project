@@ -536,8 +536,8 @@ if (valor_comprobante === '0.00') {
                             <span v-else>Cargando...</span>
                         </PrimaryButton>
                         <div v-if="state.total !== 0" class="text-white text-bold">
-                            <span class="text-xs float-left">Es necesario realizar el deposito a la cuenta: 2209785930
-                                Titular: Mary Elena Claudio Calvopiña - Banco Pichincha - CI: 0503960163</span>
+                            <span class="text-xs float-left">Es necesario realizar el deposito a la cuenta: 2207885275
+                                Titular: Mayuri Jhomayra Plasencia Velasco - Banco Pichincha - CI: 0504661406</span>
                         </div>
                     </form>
 
