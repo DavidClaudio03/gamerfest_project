@@ -595,6 +595,18 @@ const options = {
 </template>
 
 <style>
+.carousel-inner {
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    display: flex;
+    align-items: center;
+}
+
+.carousel-item img {
+    width: 95vh;
+    height: 80vh; /* Ajusta la altura para que cubra toda la ventana */
+    object-fit: contain; /* Asegura que la imagen se ajuste al área disponible sin recortarse */
+}
+
 @media (max-width: 576px) {
     .carousel-inner {
         height: 180px !important; /* Ajusta este valor según sea necesario */
