@@ -424,7 +424,7 @@ const options = {
                         <a :href="sponsor.url_pagina" target="_blank">
                             <div class="sponsor-container">
                                 <img
-                                    :src="`/img/sponsors/${sponsor.url_imagen}.webp`"
+                                    :src="`/img/sponsors/${sponsor.url_imagen}.png`"
                                     :alt="sponsor.nombre"
                                     class="w-full h-auto"
                                 />
@@ -443,11 +443,10 @@ const options = {
     >
 
     <div class="container p-4">
-    <div class="row justify-content-center align-items-start">
-
+    <div class="row justify-content-center align-items-start mt-5">
         <!-- Justificaciones -->
         <div class="col-lg-3 col-md-6 mb-4">
-            <h5 class="text-uppercase">Justificaciones</h5>
+            <h5 class="text-uppercase mb-3">Justificaciones</h5>
             <p>
                 Aquellas personas que se inscriban en cualquiera de los
                 juegos disponibles en el evento, recibirán un
@@ -455,145 +454,11 @@ const options = {
                 en las clases que pierdan a causa del evento.
             </p>
         </div>
-        <div class="container p-4">
-            <div class="row justify-content-center">
-
-                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Justificaciones</h5>
-                    <br />
-                    <p>
-                        Aquellas personas que se inscriban en cualquiera de los
-                        juegos disponibles en el evento, recibirán un
-                        certificado que podrán usar para justificar sus faltas
-                        en las clases que pierdan a causa del evento.
-                    </p>
-                </div>
-
-                <div class="col-md-12 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Redes sociales</h5>
-                    <br />
-                    <div class="d-flex justify-content-center">
-                        <a
-                            href="https://www.instagram.com/gamerfest.ec/"
-                            class="text-white mx-2"
-                            target="_blank"
-                        >
-                            <img
-                                src="img/instagram.png"
-                                class="d-block img-fluid"
-                                alt="Instagram Logo"
-                                style="max-width: 54px"
-                            />
-                        </a>
-                        <a
-                            href="https://www.facebook.com/gamerfest.ec"
-                            class="text-white mx-2"
-                            target="_blank"
-                        >
-                            <img
-                                src="img/facebook.png"
-                                class="d-block img-fluid"
-                                alt="Facebook Logo"
-                                style="max-width: 54px"
-                            />
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <div
-                        class="d-flex flex-col justify-content-center align-items-center"
-                    >
-                        <h5 class="text-uppercase">Creado por</h5>
-                        <br />
-                        <a
-                            href="https://espe-el.espe.edu.ec/ingenieria-en-software/"
-                            class="text-white mx-2"
-                            target="_blank"
-                        >
-                            <img
-                                src="img/software-logo.png"
-                                class="logo"
-                                alt="Software Logo"
-                                style="max-width: 360px"
-                            />
-                        </a>
-                        <div class="creators list-none">
-                            <div>
-                                <a
-                                    href="https://tellxmaster.world/"
-                                    target="_blank"
-                                    class="text-current no-underline link-hover"
-                                    ><span>tellxmaster</span>
-                                    <i class="fa-solid fa-dragon"></i
-                                ></a>
-                            </div>
-                            |
-                            <div>
-                                <a
-                                    href="https://github.com/joalasco"
-                                    target="_blank"
-                                    class="text-current no-underline link-hover"
-                                    ><span>joalasco</span>
-                                    <i class="fa-solid fa-khanda"></i
-                                ></a>
-                            </div>
-                            |
-                            <div>
-                                <a
-                                    href="https://github.com/jordantalahua123"
-                                    target="_blank"
-                                    class="text-current no-underline link-hover"
-                                    ><span>jordanth</span>
-                                    <i class="fab fa-github"></i
-                                ></a>
-                            </div>
-                            |
-                  
-                           
-
-                            
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <div
-                        class="d-flex flex-col justify-content-center align-items-center"
-                    >
-                            <div>
-                                <a
-                                    href="https://github.com/DavidClaudio03"
-                                    target="_blank"
-                                    class="text-current no-underline link-hover"
-                                    ><span>DavidClaudio03</span>
-                                    <i class="fab fa-github"></i
-                                ></a>
-                            </div>
-                            <div>
-                                <a
-                                    href="https://github.com/Sinchiton"
-                                    target="_blank"
-                                    class="text-current no-underline link-hover"
-                                    ><span>Sinchiton</span>
-                                    <i class="fab fa-github"></i
-                                ></a>
-                            </div>
-                            <div>
-                                <a
-                                    href="https://github.com/MrT-coder"
-                                    target="_blank"
-                                    class="text-current no-underline link-hover"
-                                    ><span>MrT-coder</span>
-                                    <i class="fab fa-github"></i
-                                ></a>
-                            </div>
-                        </div>
-                    </div>
 
 
         <!-- Redes sociales -->
         <div class="col-lg-3 col-md-6 mb-4">
-            <h5 class="text-uppercase">Redes sociales</h5>
+            <h5 class="text-uppercase mb-3">Redes sociales</h5>
             <div class="d-flex justify-content-center">
                 <a href="https://www.instagram.com/gamerfest.ec/" class="text-white mx-2" target="_blank">
                     <img src="img/instagram.png" class="d-block img-fluid" alt="Instagram Logo" style="max-width: 54px">
@@ -608,7 +473,7 @@ const options = {
         <div class="col-lg-6 col-md-12 mb-4">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <h5 class="text-uppercase">Creado por</h5>
-                <a href="https://espe-el.espe.edu.ec/ingenieria-en-software/" class="text-white mx-2" target="_blank">
+                <a href="https://isoftware.espe.edu.ec/" class="text-white mx-2" target="_blank">
                     <img src="img/software-logo.png" class="logo" alt="Software Logo" style="max-width: 360px">
                 </a>
                 <div class="creators list-none d-flex justify-content-center align-items-center flex-wrap">
@@ -633,7 +498,6 @@ const options = {
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 
@@ -658,7 +522,7 @@ const options = {
     .carousel-inner {
         height: 180px !important; /* Ajusta este valor según sea necesario */
     }
-    
+
     .carousel-item img {
         max-height: 250px; /* Ajusta este valor según sea necesario */
         object-fit: cover; /* Asegura que la imagen cubra el área disponible sin deformarse */
@@ -872,4 +736,3 @@ const options = {
     border: none;
 }
 </style>
-
