@@ -39,7 +39,7 @@
     </head>
     <body style="font-family: Arial, Helvetica, sans-serif; color: white; background-color: #60278B;">
         <div class="certificate">
-            <img class="certificate-logo" src="{{ public_path('img/gamerfest.png') }}" alt="Logo">
+            <img class="certificate-logo" src="{{ public_path('img/logoGTA.png') }}" alt="Logo">
             <h1 class="certificate-title">Certificado de Participación</h1>
             <p class="certificate-user">Se otorga el presente diploma a {{ $user->name }} por su destacada participación en el Gamerfest 2024, el evento más importante de videojuegos del año, donde demostró sus habilidades y pasión por los siguientes juegos:
             @foreach($inscripciones as $inscripcion)
