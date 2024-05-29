@@ -574,9 +574,9 @@ const options = {
         border-radius: 10px;
     }
 
-    /* .carousel-inner {
+    .carousel-inner {
         border-radius: 10px !important;
-    } */
+    }
 
     .section-title {
         font-size: 1.9rem;
@@ -614,6 +614,7 @@ const options = {
         /* Ajusta este valor según sea necesario */
         object-fit: cover;
         /* Asegura que la imagen cubra el área disponible sin deformarse */
+        border-radius: 10px;
     }
 }
 
@@ -639,9 +640,8 @@ const options = {
 
 .carousel-item img {
     height: 68vh;
-    /* Ajusta la altura para que cubra toda la ventana */
-    /* object-fit: cover; */
-    /* Asegura que la imagen se ajuste al área disponible sin recortarse */
+    border-radius: 10px;
+
 }
 
 @media (max-width: 576px) {
@@ -655,6 +655,7 @@ const options = {
         /* Ajusta este valor según sea necesario */
         object-fit: contain;
         /* Asegura que la imagen cubra el área disponible sin deformarse */
+        border-radius: 10px;
     }
 }
 </style>
