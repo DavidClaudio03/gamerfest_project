@@ -96,8 +96,8 @@ const generateCertificado = async () => {
 
             <!-- Información del Evento -->
             <div class="event-info text-white w-75 my-5 mx-auto text-center">
-                <h1 style="font-size: 28px; font-weight: bold;">Gamerfest 2023</h1>
-                <p style="font-size: 16px; margin-top: 20px;">Descubre más sobre el evento, los participantes y los juegos que hicieron historia este año.</p>
+                <h1 style="font-size: 28px; font-weight: bold;">Gamerfest 2024</h1>
+                <p style="font-size: 16px; margin-top: 20px;">Explora los momentos, las caras y los juegos que definieron este año. ¡No te pierdas de vivir la experiencia!</p>
             </div>
 
             <!-- Galería -->
@@ -217,7 +217,7 @@ const generateCertificado = async () => {
             </div>
         </div>
         <div class="text-center p-3" style="background-color: black;">
-            © 2023 Copyright:
+            © 2024 Copyright:
             <a class="text-white">GamerFest</a>
         </div>
     </footer>

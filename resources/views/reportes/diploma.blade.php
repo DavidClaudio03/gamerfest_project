@@ -41,7 +41,7 @@
         <div class="certificate">
             <img class="certificate-logo" src="{{ public_path('img/gamerfest.png') }}" alt="Logo">
             <h1 class="certificate-title">Certificado de Participación</h1>
-            <p class="certificate-user">Se otorga el presente diploma a {{ $user->name }} por su destacada participación en el Gamerfest 2023, el evento más importante de videojuegos del año, donde demostró sus habilidades y pasión por los siguientes juegos:
+            <p class="certificate-user">Se otorga el presente diploma a {{ $user->name }} por su destacada participación en el Gamerfest 2024, el evento más importante de videojuegos del año, donde demostró sus habilidades y pasión por los siguientes juegos:
             @foreach($inscripciones as $inscripcion)
                 {{ $inscripcion['juego_nombre'] }} ({{ $inscripcion['tipo'] }})
             @endforeach
