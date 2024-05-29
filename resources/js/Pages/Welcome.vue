@@ -185,322 +185,229 @@ const options = {
 </script>
 
 <template>
+
     <Head title="Inicio">
         <link rel="icon" type="image/png" href="/img/logo.png">
     </Head>
     <div id="main-container">
-    <div
-        class="fixed top-0 left-0 w-full navbar-container animate__animated animate__fadeInDown"
-    >
-        <Navbar
-            :can-login="canLogin"
-            :can-register="canRegister"
-            :laravel-version="laravelVersion"
-            :php-version="phpVersion"
-            :num-juegos-seleccionados="numJuegosSeleccionados"
-            :juegos-inscritos="juegosInscritos"
-        >
-        </Navbar>
-    </div>
-<!-- Slider -->
-    <div class="mt-20">
-        <div class="">
-            <div
-                class="most-popular animate__animated animate__fadeIn"
-                style="
+        <div class="fixed top-0 left-0 w-full navbar-container animate__animated animate__fadeInDown">
+            <Navbar :can-login="canLogin" :can-register="canRegister" :laravel-version="laravelVersion"
+                :php-version="phpVersion" :num-juegos-seleccionados="numJuegosSeleccionados"
+                :juegos-inscritos="juegosInscritos">
+            </Navbar>
+        </div>
+        <!-- Slider -->
+        <div class="mt-20">
+            <div class="">
+                <div class="most-popular animate__animated animate__fadeIn" style="
                     margin-top: 140px;
                     background-image: url('/img/fondoGTA.JPG');
                     width: auto;
                     height: auto;
                     background-size: cover;">
-                <div id="slide" class="carousel slide" data-ride="carousel" >
-                    <div class="carousel-inner" style="border-radius: 25px;height: 450px; width: 100%; object-fit: cover;" >
-                        <div class="carousel-item active" data-interval="1800">
-                            <img
-                                src="/img/slide_lol.png"
-                                class="d-block w-100 img-fluid "
-                                alt="..."
-                            />
+                    <div id="slide" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner"
+                            style="border-radius: 25px;height: 450px; width: 100%; object-fit: cover;">
+                            <div class="carousel-item active" data-interval="1800">
+                                <img src="/img/slide_lol.png" class="d-block w-100 img-fluid " alt="..." />
+                            </div>
+                            <div class="carousel-item" data-interval="1800">
+                                <img src="/img/slide_fortnite.png" class="d-block w-100 img-fluid" alt="..." />
+                            </div>
+                            <div class="carousel-item" data-interval="1800">
+                                <img src="/img/slide_rocket.jpg" class="d-block w-100 img-fluid" alt="..." />
+                            </div>
+                            <div class="carousel-item" data-interval="1800">
+                                <img src="/img/slide_free.jpg" class="d-block w-100 img-fluid" alt="..." />
+                            </div>
+                            <div class="carousel-item" data-interval="1800">
+                                <img src="/img/slide_fifa.jpg" class="d-block w-100 img-fluid" alt="..." />
+                            </div>
+                            <div class="carousel-item" data-interval="1800">
+                                <img src="/img/slide_mario.png" class="d-block w-100 img-fluid" alt="..." />
+                            </div>
+                            <div class="carousel-item" data-interval="1800">
+                                <img src="/img/slide_clash.webp" class="d-block w-100 img-fluid" alt="..." />
+                            </div>
+                            <div class="carousel-item" data-interval="1800">
+                                <img src="/img/slide_dragon.webp" class="d-block w-100 img-fluid" alt="..." />
+                            </div>
+                            <div class="carousel-item" data-interval="1800">
+                                <img src="/img/slide_valorant.webp" class="d-block w-100 img-fluid" alt="..." />
+                            </div>
+                            <div class="carousel-item" data-interval="1800">
+                                <img src="/img/slide_dota.jpg" class="d-block w-100 img-fluid" alt="..." />
+                            </div>
                         </div>
-                        <div class="carousel-item" data-interval="1800">
-                            <img
-                                src="/img/slide_fortnite.png"
-                                class="d-block w-100 img-fluid"
-                                alt="..."
-                            />
-                        </div>
-                        <div class="carousel-item" data-interval="1800">
-                            <img
-                                src="/img/slide_rocket.jpg"
-                                class="d-block w-100 img-fluid"
-                                alt="..."
-                            />
-                        </div>
-                        <div class="carousel-item" data-interval="1800">
-                            <img
-                                src="/img/slide_free.jpg"
-                                class="d-block w-100 img-fluid"
-                                alt="..."
-                            />
-                        </div>
-                        <div class="carousel-item" data-interval="1800">
-                            <img
-                                src="/img/slide_fifa.jpg"
-                                class="d-block w-100 img-fluid"
-                                alt="..."
-                            />
-                        </div>
-                        <div class="carousel-item" data-interval="1800">
-                            <img
-                                src="/img/slide_mario.png"
-                                class="d-block w-100 img-fluid"
-                                alt="..."
-                            />
-                        </div>
-                        <div class="carousel-item" data-interval="1800">
-                            <img
-                                src="/img/slide_clash.webp"
-                                class="d-block w-100 img-fluid"
-                                alt="..."
-                            />
-                        </div>
-                        <div class="carousel-item" data-interval="1800">
-                            <img
-                                src="/img/slide_dragon.webp"
-                                class="d-block w-100 img-fluid"
-                                alt="..."
-                            />
-                        </div>
-                        <div class="carousel-item" data-interval="1800">
-                            <img
-                                src="/img/slide_valorant.webp"
-                                class="d-block w-100 img-fluid"
-                                alt="..."
-                            />
-                        </div>
-                        <div class="carousel-item" data-interval="1800">
-                            <img
-                                src="/img/slide_dota.jpg"
-                                class="d-block w-100 img-fluid"
-                                alt="..."
-                            />
-                        </div>
+                        <a class="carousel-control-prev" href="#slide" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#slide" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
-                    <a
-                        class="carousel-control-prev"
-                        href="#slide"
-                        role="button"
-                        data-slide="prev"
-                    >
-                        <span
-                            class="carousel-control-prev-icon"
-                            aria-hidden="true"
-                        ></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a
-                        class="carousel-control-next"
-                        href="#slide"
-                        role="button"
-                        data-slide="next"
-                    >
-                        <span
-                            class="carousel-control-next-icon"
-                            aria-hidden="true"
-                        ></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
-            </div>
-            <div
-                class="most-popular"
-                style="
+                <div class="most-popular" style="
                     background-image:  url('/img/fondoInd.jpg'); ;
                     margin-top: 40px;
                     width: auto;
                     height: auto;
                     background-size: cover;
-                "
-            >
-        <!--Slider fin-->
-                <h2 class="section-title" >Listado Juegos Individuales</h2>
-                <div class="help-text">
-                    Selecciona los juegos para añadir a tú carrito...
-                </div>
-                <div class="card_container">
-                    <div v-for="juego in juegosIndividual" :key="juego.id">
-                        <div class="flex flex-col items-center mb-4">
-                            <CardCheckbox
-                                :gameId="juego.id"
-                                :gameName="juego.nombre"
-                                :gamePrice="juego.costo_inscripcion"
-                                :imageUrl="`/img/${juego.img_id}.jpg`"
-                                :imageId="`${juego.img_id}`"
-                                :estaInscrito="juego.estaInscrito"
-                                @selectionChange="handleSelectionChange"
-                                @showAlert="showAlert"
-                            />
-                            <a
-                                class="text-light mx-auto inline-flex items-center px-3 py-2 text-sm font-medium text-center hover:text-blue-500 rounded transition-colors duration-200 ease-in-out"
-                                :href="`/pdf/${juego.img_id}.pdf`"
-                                target="_blank"
-                            >
-                                <i class="fa-solid fa-book mr-2"></i>Reglamento
-                            </a>
+                ">
+                    <!--Slider fin-->
+                    <h2 class="section-title">Listado Juegos Individuales</h2>
+                    <div class="help-text">
+                        Selecciona los juegos para añadir a tú carrito...
+                    </div>
+                    <div class="card_container">
+                        <div v-for="juego in juegosIndividual" :key="juego.id">
+                            <div class="flex flex-col items-center mb-4">
+                                <CardCheckbox :gameId="juego.id" :gameName="juego.nombre"
+                                    :gamePrice="juego.costo_inscripcion" :imageUrl="`/img/${juego.img_id}.jpg`"
+                                    :imageId="`${juego.img_id}`" :estaInscrito="juego.estaInscrito"
+                                    @selectionChange="handleSelectionChange" @showAlert="showAlert" />
+                                <a class="text-light mx-auto inline-flex items-center px-3 py-2 text-sm font-medium text-center hover:text-blue-500 rounded transition-colors duration-200 ease-in-out"
+                                    :href="`/pdf/${juego.img_id}.pdf`" target="_blank">
+                                    <i class="fa-solid fa-book mr-2"></i>Reglamento
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div
-                class="most-popular"
-                style="
+                <div class="most-popular" style="
                     background-image:  url('/img/fondoGru.jpg');
                     margin-top: 40px;
                     width: auto;
                     height: auto;
                     background-size: cover;
-                "
-            >
-                <h2 class="section-title">Listado Juegos Grupales</h2>
-                <div class="help-text">
-                    Selecciona algún juego grupal, únicamente es necesario la
-                    inscripción del capitan...
+                ">
+                    <h2 class="section-title">Listado Juegos Grupales</h2>
+                    <div class="help-text">
+                        Selecciona algún juego grupal, únicamente es necesario la
+                        inscripción del capitan...
+                    </div>
+                    <div class="card_container">
+                        <div v-for="juego in juegosGrupo" :key="juego.id">
+                            <div class="flex flex-col items-center mb-4">
+                                <CardCheckbox :gameId="juego.id" :gameName="juego.nombre"
+                                    :gamePrice="juego.costo_inscripcion" :imageUrl="`/img/${juego.img_id}.jpg`"
+                                    :imageId="`${juego.img_id}`" :estaInscrito="juego.estaInscrito"
+                                    @selectionChange="handleSelectionChange" @showAlert="showAlert" />
+                                <a class="text-light mx-auto inline-flex items-center px-3 py-2 text-sm font-medium text-center hover:text-blue-500 rounded transition-colors duration-200 ease-in-out"
+                                    as="button" :href="`/pdf/${juego.img_id}.pdf`" target="_blank">
+                                    <i class="fa-solid fa-book mr-2"></i>Reglamento
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card_container">
-                    <div v-for="juego in juegosGrupo" :key="juego.id">
-                        <div class="flex flex-col items-center mb-4">
-                            <CardCheckbox
-                                :gameId="juego.id"
-                                :gameName="juego.nombre"
-                                :gamePrice="juego.costo_inscripcion"
-                                :imageUrl="`/img/${juego.img_id}.jpg`"
-                                :imageId="`${juego.img_id}`"
-                                :estaInscrito="juego.estaInscrito"
-                                @selectionChange="handleSelectionChange"
-                                @showAlert="showAlert"
-                            />
-                            <a
-                                class="text-light mx-auto inline-flex items-center px-3 py-2 text-sm font-medium text-center hover:text-blue-500 rounded transition-colors duration-200 ease-in-out"
-                                as="button"
-                                :href="`/pdf/${juego.img_id}.pdf`"
-                                target="_blank"
-                            >
-                                <i class="fa-solid fa-book mr-2"></i>Reglamento
+                <div class="most-popular location" style="
+                    background-color: rgba(87, 61, 66, 0.26);
+                    margin-top: 40px;
+                ">
+                    <h2 class="section-title">Ubicación del evento</h2>
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.2120238453513!2d-78.5886726250348!3d-0.998870298991496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d4639e7c398d3f%3A0xc4999bdc40abfc48!2sUniversidad%20De%20Las%20Fuerzas%20Armadas%20ESPE%20Extensi%C3%B3n%20Belisario%20Quevedo!5e0!3m2!1ses-419!2sec!4v1716325420696!5m2!1ses-419!2sec"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="most-popular sponsors" style="
+                    background-color: rgba(87, 61, 66, 0.26);
+                    margin-top: 40px;
+                ">
+                    <h2 class="section-title">Sponsors del Evento</h2>
+                    <div class="help-text">
+                        Un agradecimiento especial para las personas que confiaron
+                        en el proyecto
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center my-3">
+                        <div v-for="sponsor in sponsors" class="flex flex-row items-center justify-center mb-4">
+                            <a :href="sponsor.url_pagina" target="_blank">
+                                <div class="sponsor-container">
+                                    <img :src="`/img/sponsors/${sponsor.url_imagen}.webp`" :alt="sponsor.nombre"
+                                        class="w-full h-auto" />
+                                </div>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div
-                class="most-popular location"
-                style="
-                    background-color: rgba(87, 61, 66, 0.26);
-                    margin-top: 40px;
-                "
-            >
-                <h2 class="section-title">Ubicación del evento</h2>
-                <div class="embed-responsive embed-responsive-1by1">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.2120238453513!2d-78.5886726250348!3d-0.998870298991496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d4639e7c398d3f%3A0xc4999bdc40abfc48!2sUniversidad%20De%20Las%20Fuerzas%20Armadas%20ESPE%20Extensi%C3%B3n%20Belisario%20Quevedo!5e0!3m2!1ses-419!2sec!4v1716325420696!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="shines"></div>
+    </div>
+    <footer class="text-white text-center mt-5" style="background-color: rgba(67, 61, 66, 0.86)">
+
+        <div class="container p-4">
+            <div class="row justify-content-center align-items-start">
+                <!-- Justificaciones -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Justificaciones</h5>
+                    <p>
+                        Aquellas personas que se inscriban en cualquiera de los
+                        juegos disponibles en el evento, recibirán un
+                        certificado que podrán usar para justificar sus faltas
+                        en las clases que pierdan a causa del evento.
+                    </p>
                 </div>
-            </div>
-            <div
-                class="most-popular sponsors"
-                style="
-                    background-color: rgba(87, 61, 66, 0.26);
-                    margin-top: 40px;
-                "
-            >
-                <h2 class="section-title">Sponsors del Evento</h2>
-                <div class="help-text">
-                    Un agradecimiento especial para las personas que confiaron
-                    en el proyecto
-                </div>
-                <div
-                    class="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center my-3"
-                >
-                    <div
-                        v-for="sponsor in sponsors"
-                        class="flex flex-row items-center justify-center mb-4"
-                    >
-                        <a :href="sponsor.url_pagina" target="_blank">
-                            <div class="sponsor-container">
-                                <img
-                                    :src="`/img/sponsors/${sponsor.url_imagen}.webp`"
-                                    :alt="sponsor.nombre"
-                                    class="w-full h-auto"
-                                />
-                            </div>
+
+
+                <!-- Redes sociales -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Redes sociales</h5>
+                    <div class="d-flex justify-content-center">
+                        <a href="https://www.instagram.com/gamerfest.ec/" class="text-white mx-2" target="_blank">
+                            <img src="img/instagram.png" class="d-block img-fluid" alt="Instagram Logo"
+                                style="max-width: 54px">
                         </a>
+                        <a href="https://www.facebook.com/gamerfest.ec" class="text-white mx-2" target="_blank">
+                            <img src="img/facebook.png" class="d-block img-fluid" alt="Facebook Logo"
+                                style="max-width: 54px">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Creado por -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <h5 class="text-uppercase">Creado por</h5>
+                        <a href="https://espe-el.espe.edu.ec/ingenieria-en-software/" class="text-white mx-2"
+                            target="_blank">
+                            <img src="img/software-logo.png" class="logo" alt="Software Logo" style="max-width: 360px">
+                        </a>
+                        <div class="creators list-none d-flex justify-content-center align-items-center flex-wrap">
+                            <a href="https://tellxmaster.world/" target="_blank"
+                                class="text-current no-underline link-hover mx-2">
+                                <span>tellxmaster</span><i class="fa-solid fa-dragon"></i>
+                            </a>
+                            <a href="https://github.com/joalasco" target="_blank"
+                                class="text-current no-underline link-hover mx-2">
+                                <span>joalasco</span><i class="fa-solid fa-khanda"></i>
+                            </a>
+                            <a href="https://github.com/jordantalahua123" target="_blank"
+                                class="text-current no-underline link-hover mx-2">
+                                <span>jordanth</span><i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://github.com/DavidClaudio03" target="_blank"
+                                class="text-current no-underline link-hover mx-2">
+                                <span>DavidClaudio03</span><i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://github.com/Sinchiton" target="_blank"
+                                class="text-current no-underline link-hover mx-2">
+                                <span>Sinchiton</span><i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://github.com/MrT-coder" target="_blank"
+                                class="text-current no-underline link-hover mx-2">
+                                <span>MrT-coder</span><i class="fab fa-github"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="shines"></div>
-    </div>
-    <footer
-        class="text-white text-center mt-5"
-        style="background-color: rgba(67, 61, 66, 0.86)"
-    >
-
-    <div class="container p-4">
-    <div class="row justify-content-center align-items-start">
-        <!-- Justificaciones -->
-        <div class="col-lg-3 col-md-6 mb-4">
-            <h5 class="text-uppercase">Justificaciones</h5>
-            <p>
-                Aquellas personas que se inscriban en cualquiera de los
-                juegos disponibles en el evento, recibirán un
-                certificado que podrán usar para justificar sus faltas
-                en las clases que pierdan a causa del evento.
-            </p>
-        </div>
-
-
-        <!-- Redes sociales -->
-        <div class="col-lg-3 col-md-6 mb-4">
-            <h5 class="text-uppercase">Redes sociales</h5>
-            <div class="d-flex justify-content-center">
-                <a href="https://www.instagram.com/gamerfest.ec/" class="text-white mx-2" target="_blank">
-                    <img src="img/instagram.png" class="d-block img-fluid" alt="Instagram Logo" style="max-width: 54px">
-                </a>
-                <a href="https://www.facebook.com/gamerfest.ec" class="text-white mx-2" target="_blank">
-                    <img src="img/facebook.png" class="d-block img-fluid" alt="Facebook Logo" style="max-width: 54px">
-                </a>
-            </div>
-        </div>
-
-        <!-- Creado por -->
-        <div class="col-lg-6 col-md-12 mb-4">
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <h5 class="text-uppercase">Creado por</h5>
-                <a href="https://espe-el.espe.edu.ec/ingenieria-en-software/" class="text-white mx-2" target="_blank">
-                    <img src="img/software-logo.png" class="logo" alt="Software Logo" style="max-width: 360px">
-                </a>
-                <div class="creators list-none d-flex justify-content-center align-items-center flex-wrap">
-                    <a href="https://tellxmaster.world/" target="_blank" class="text-current no-underline link-hover mx-2">
-                        <span>tellxmaster</span><i class="fa-solid fa-dragon"></i>
-                    </a>
-                    <a href="https://github.com/joalasco" target="_blank" class="text-current no-underline link-hover mx-2">
-                        <span>joalasco</span><i class="fa-solid fa-khanda"></i>
-                    </a>
-                    <a href="https://github.com/jordantalahua123" target="_blank" class="text-current no-underline link-hover mx-2">
-                        <span>jordanth</span><i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://github.com/DavidClaudio03" target="_blank" class="text-current no-underline link-hover mx-2">
-                        <span>DavidClaudio03</span><i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://github.com/Sinchiton" target="_blank" class="text-current no-underline link-hover mx-2">
-                        <span>Sinchiton</span><i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://github.com/MrT-coder" target="_blank" class="text-current no-underline link-hover mx-2">
-                        <span>MrT-coder</span><i class="fab fa-github"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
         <div class="text-center p-3" style="background-color: black">
             © 2024 Copyright:
@@ -510,39 +417,11 @@ const options = {
 
 
 
-    <AlertComponent
-        :color="'#4E9F3D'"
-        :isAlertVisible="isAlertVisible"
-        :title="'Nuevo Juego'"
-        :message="alertMessage"
-    />
+    <AlertComponent :color="'#4E9F3D'" :isAlertVisible="isAlertVisible" :title="'Nuevo Juego'"
+        :message="alertMessage" />
 </template>
 
 <style>
-.carousel-inner {
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    display: flex;
-    align-items: center;   
-}
-
-.carousel-item img {
-    width: 100vh;
-    height: 60vh; /* Ajusta la altura para que cubra toda la ventana */
-    object-fit: contain; /* Asegura que la imagen se ajuste al área disponible sin recortarse */
-    
-}
-
-@media (max-width: 576px) {
-    .carousel-inner {
-        height: 50vh !important; /* Ajusta este valor según sea necesario */
-    }
-
-    .carousel-item img {
-        height: 35vh; /* Ajusta este valor según sea necesario */
-        object-fit: contain; /* Asegura que la imagen cubra el área disponible sin deformarse */
-    }
-}
-
 #main-container {
     position: relative;
     overflow: hidden;
@@ -558,8 +437,10 @@ const options = {
 
 .shine {
     position: absolute;
-    width: 10px; /* Ancho del punto */
-    height: 10px; /* Alto del punto */
+    width: 10px;
+    /* Ancho del punto */
+    height: 10px;
+    /* Alto del punto */
     background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
     border-radius: 50%;
     opacity: 0;
@@ -592,7 +473,8 @@ const options = {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 0.5rem; /* Ajusta según sea necesario */
+    border-radius: 0.5rem;
+    /* Ajusta según sea necesario */
     filter: brightness(1.2);
     transition: all 200ms ease-in-out;
 }
@@ -692,9 +574,9 @@ const options = {
         border-radius: 10px;
     }
 
-    .carousel-inner {
+    /* .carousel-inner {
         border-radius: 10px !important;
-    }
+    } */
 
     .section-title {
         font-size: 1.9rem;
@@ -748,5 +630,31 @@ const options = {
 .close:hover {
     color: #db005b;
     border: none;
+}
+
+.carousel-inner {
+    display: flex;
+    align-items: center;
+} 
+
+.carousel-item img {
+    height: 68vh;
+    /* Ajusta la altura para que cubra toda la ventana */
+    /* object-fit: cover; */
+    /* Asegura que la imagen se ajuste al área disponible sin recortarse */
+}
+
+@media (max-width: 576px) {
+    .carousel-inner {
+        height: 180px !important;
+        /* Ajusta este valor según sea necesario */
+    }
+
+    .carousel-item img {
+        max-height: 250px;
+        /* Ajusta este valor según sea necesario */
+        object-fit: contain;
+        /* Asegura que la imagen cubra el área disponible sin deformarse */
+    }
 }
 </style>
