@@ -202,7 +202,7 @@ const options = {
         >
         </Navbar>
     </div>
-<!-- hola -->
+<!-- Slider -->
     <div class="mt-20">
         <div class="">
             <div
@@ -322,6 +322,7 @@ const options = {
                     background-size: cover;
                 "
             >
+        <!--Slider fin-->
                 <h2 class="section-title" >Listado Juegos Individuales</h2>
                 <div class="help-text">
                     Selecciona los juegos para añadir a tú carrito...
@@ -521,23 +522,24 @@ const options = {
 .carousel-inner {
     height: 100vh; /* Ocupa toda la altura de la ventana */
     display: flex;
-    align-items: center;
+    align-items: center;   
 }
 
 .carousel-item img {
-    width: 95vh;
-    height: 80vh; /* Ajusta la altura para que cubra toda la ventana */
+    width: 100vh;
+    height: 60vh; /* Ajusta la altura para que cubra toda la ventana */
     object-fit: contain; /* Asegura que la imagen se ajuste al área disponible sin recortarse */
+    
 }
 
 @media (max-width: 576px) {
     .carousel-inner {
-        height: 180px !important; /* Ajusta este valor según sea necesario */
+        height: 50vh !important; /* Ajusta este valor según sea necesario */
     }
 
     .carousel-item img {
-        max-height: 250px; /* Ajusta este valor según sea necesario */
-        object-fit: cover; /* Asegura que la imagen cubra el área disponible sin deformarse */
+        height: 35vh; /* Ajusta este valor según sea necesario */
+        object-fit: contain; /* Asegura que la imagen cubra el área disponible sin deformarse */
     }
 }
 
