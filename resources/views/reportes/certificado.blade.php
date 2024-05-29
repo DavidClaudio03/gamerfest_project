@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="content">
-            <p>Por medio de la presente se certifica que <strong>{{ $user->name }}</strong> participó en el Gamerfest 2023, uno de los eventos más destacados en el ámbito de los videojuegos durante este año.</p>
+            <p>Por medio de la presente se certifica que <strong>{{ $user->name }}</strong> participó en el Gamerfest 2024, uno de los eventos más destacados en el ámbito de los videojuegos durante este año.</p>
             <p>La participación de {{ $user->name }} incluyó los siguientes juegos:</p>
             <ul>
                 @foreach($inscripciones as $inscripcion)
