@@ -424,7 +424,7 @@ const options = {
                         <a :href="sponsor.url_pagina" target="_blank">
                             <div class="sponsor-container">
                                 <img
-                                    :src="`/img/sponsors/${sponsor.url_imagen}.webp`"
+                                    :src="`/img/sponsors/${sponsor.url_imagen}.png`"
                                     :alt="sponsor.nombre"
                                     class="w-full h-auto"
                                 />
@@ -443,10 +443,10 @@ const options = {
     >
 
     <div class="container p-4">
-    <div class="row justify-content-center align-items-start">
+    <div class="row justify-content-center align-items-start mt-5">
         <!-- Justificaciones -->
         <div class="col-lg-3 col-md-6 mb-4">
-            <h5 class="text-uppercase">Justificaciones</h5>
+            <h5 class="text-uppercase mb-3">Justificaciones</h5>
             <p>
                 Aquellas personas que se inscriban en cualquiera de los
                 juegos disponibles en el evento, recibirán un
@@ -458,7 +458,7 @@ const options = {
 
         <!-- Redes sociales -->
         <div class="col-lg-3 col-md-6 mb-4">
-            <h5 class="text-uppercase">Redes sociales</h5>
+            <h5 class="text-uppercase mb-3">Redes sociales</h5>
             <div class="d-flex justify-content-center">
                 <a href="https://www.instagram.com/gamerfest.ec/" class="text-white mx-2" target="_blank">
                     <img src="img/instagram.png" class="d-block img-fluid" alt="Instagram Logo" style="max-width: 54px">
@@ -473,7 +473,7 @@ const options = {
         <div class="col-lg-6 col-md-12 mb-4">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <h5 class="text-uppercase">Creado por</h5>
-                <a href="https://espe-el.espe.edu.ec/ingenieria-en-software/" class="text-white mx-2" target="_blank">
+                <a href="https://isoftware.espe.edu.ec/" class="text-white mx-2" target="_blank">
                     <img src="img/software-logo.png" class="logo" alt="Software Logo" style="max-width: 360px">
                 </a>
                 <div class="creators list-none d-flex justify-content-center align-items-center flex-wrap">
