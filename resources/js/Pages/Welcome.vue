@@ -315,10 +315,9 @@ const options = {
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-                <div class="most-popular sponsors" style="
+                <!-- <div class="most-popular sponsors" style="
                     background-color: rgba(87, 61, 66, 0.26);
-                    margin-top: 40px;
-                ">
+                    margin-top: 40px;">
                     <h2 class="section-title">Sponsors del Evento</h2>
                     <div class="help-text">
                         Un agradecimiento especial para las personas que confiaron
@@ -328,13 +327,13 @@ const options = {
                         <div v-for="sponsor in sponsors" class="flex flex-row items-center justify-center mb-4">
                             <a :href="sponsor.url_pagina" target="_blank">
                                 <div class="sponsor-container">
-                                    <img :src="`/img/sponsors/${sponsor.url_imagen}.webp`" :alt="sponsor.nombre"
+                                    <img :src="`/img/sponsors/${sponsor.url_imagen}.png`" :alt="sponsor.nombre"
                                         class="w-full h-auto" />
                                 </div>
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="shines"></div>
@@ -374,7 +373,7 @@ const options = {
         <div class="col-lg-6 col-md-12 mb-4">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <h5 class="text-uppercase">Creado por</h5>
-                <a href="https://espe-el.espe.edu.ec/ingenieria-en-software/" class="text-white mx-2"
+                <a href="https://isoftware.espe.edu.ec/" class="text-white mx-2"
                     target="_blank">
                     <img src="img/software-logo.png" class="logo" alt="Software Logo" style="max-width: 360px">
                 </a>
@@ -635,7 +634,7 @@ const options = {
 .carousel-inner {
     display: flex;
     align-items: center;
-} 
+}
 
 .carousel-item img {
     height: 68vh;

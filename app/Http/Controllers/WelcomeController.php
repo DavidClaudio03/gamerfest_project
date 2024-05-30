@@ -33,7 +33,7 @@ class WelcomeController extends Controller
                 'estaInscrito' => $juego->inscripcionesGrupales->pluck('equipo')->where('user_id', $userId)->count() > 0
             ];
         });
-    
+
         $juegosIndividual = Juego::where('modalidad', 'individual')->get()->map(function ($juego) use ($userId) {
             return [
                 'id' => $juego->id,
@@ -45,7 +45,7 @@ class WelcomeController extends Controller
         });
 
         $sponsors = Sponsor::all();
-    
+
         return Inertia::render('Welcome', [
             'role' => Auth::check() && Auth::user()->hasRole("admin"),
             'canLogin' => Route::has('login'),
