@@ -327,7 +327,7 @@ const options = {
                         <div v-for="sponsor in sponsors" class="flex flex-row items-center justify-center mb-4">
                             <a :href="sponsor.url_pagina" target="_blank">
                                 <div class="sponsor-container">
-                                    <img :src="`/img/sponsors/${sponsor.url_imagen}.png`" :alt="sponsor.nombre"
+                                    <img :src="`/img/sponsors/${sponsor.url_imagen}`" :alt="sponsor.nombre"
                                         class="w-full h-auto" />
                                 </div>
                             </a>
