@@ -333,7 +333,7 @@ const options = {
                             </a>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
         <div class="shines"></div>
