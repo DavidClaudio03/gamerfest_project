@@ -315,7 +315,7 @@ const options = {
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-                <!-- <div class="most-popular sponsors" style="
+                <div class="most-popular sponsors" style="
                     background-color: rgba(87, 61, 66, 0.26);
                     margin-top: 40px;">
                     <h2 class="section-title">Sponsors del Evento</h2>
@@ -333,7 +333,7 @@ const options = {
                             </a>
                         </div>
                     </div>
-                </div> -->
+                </div> 
             </div>
         </div>
         <div class="shines"></div>
